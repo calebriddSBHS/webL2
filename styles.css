@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: bebas;
+    src: url(bebas-regular.eot);
+}
+
+body {
+    background-color: #1d1d1f;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 2fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr 2fr 1fr;
+    height: 939px;
+    font-family: bebas;
+    color: white;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 1/5;
+    grid-column: 5/6;
+    grid-row: 1/5;
+    background-color: #262627;
+    padding: 10px;
+}
+
+.links {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-family: bebas;
+    font-size: 20px;
+}
+
+.logo {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    justify-self: center;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column: 3/5;
+    grid-row: 3/4;
+    justify-self: center;
+    text-decoration: underline;
+}
+
+.box2 {
+    display: grid;
+    grid-template-columns: 50% 50% 50%;
+    grid-template-rows: 10% 10%;
+    grid-column: 3/4;
+    grid-row: 3/4;
+    justify-self: center;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: lightgrey;
+    text-decoration: none;
+}
+
+a:active {
+    color: red;
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+.display {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    justify-self: center;
+}
+
+.cart {
+    grid-column: 5/6;
+}
+
+#mask {
+    filter: drop-shadow(0 0 0.45rem rgb(226, 226, 226));
+}
+
+#maskhover:hover {
+    filter: drop-shadow(0 0 0.45rem rgb(226, 226, 226));
+}
