@@ -32,13 +32,20 @@ body {
     grid-column: 1/2;
     grid-row: 1/2;
     font-family: bebas;
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 
 .logo {
     grid-row: 2/3;
     grid-column: 3/4;
     justify-self: center;
+}
+
+.display {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    justify-self: center;
+    justify-content: center;
 }
 
 .products {
@@ -48,6 +55,7 @@ body {
     grid-column: 3/5;
     grid-row: 3/4;
     justify-self: center;
+    justify-content: center;
     text-decoration: underline;
 }
 
@@ -85,12 +93,6 @@ ul li {
     margin-bottom: 20px;
 }
 
-.display {
-    grid-column: 3/4;
-    grid-row: 3/4;
-    justify-self: center;
-}
-
 .cart {
     grid-column: 5/6;
 }
@@ -99,6 +101,32 @@ ul li {
     filter: drop-shadow(0 0 0.45rem rgb(226, 226, 226));
 }
 
-#maskhover:hover {
-    filter: drop-shadow(0 0 0.45rem rgb(226, 226, 226));
+#stage a {
+    position: absolute;
+}
+
+
+#stage a:nth-of-type(1) {
+    animation-name: fader;
+    animation-delay: 4s;
+    animation-duration: 1s;
+    z-index: 20;
+}
+
+#stage a:nth-of-type(2) {
+    z-index: 10;
+}
+
+#stage a:nth-of-type(n+3) {
+    display: none;
+}
+
+@keyframes fader {
+    from {
+        opacity: 1.0;
+    }
+
+    to {
+        opacity: 0.0;
+    }
 }

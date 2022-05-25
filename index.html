@@ -6,9 +6,28 @@
 </head>
 
 <body>
-    <div class="display">
-        <img src="vigour energy wild berry product.png" alt="logo" width="330" height="280">
-        <h2>Welcome to vigour energy, here we sell a variety of highly caffeinated ennrgy drinks. See our shop for more!</h2>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function (e) {
+
+            var stage = document.getElementById("stage");
+            var fadeComplete = function (e) {
+                stage.appendChild(arr[0]);
+            };
+            var arr = stage.getElementsByTagName("a");
+            for (var i = 0; i < arr.length; i++) {
+                arr[i].addEventListener("animationend", fadeComplete, false);
+            }
+        }, false);
+    </script>
+
+    <div class="display" id="stage">
+        <h2>Welcome to vigour energy, here we sell a variety of highly caffeinated ennrgy drinks. See our shop for more!
+        </h2>
+        <a href="berry.png"><img src="berry.png" alt="berry" width="330" height="280"></a>
+        <a href="death.png"><img src="death.png" alt="death" width="330" height="280"></a>
+        <a href="tangerine.png"><img src="tangerine.png" alt="tangerine" width="330" height="280"></a>
+
     </div>
     <div class="box">
         <div class="cart">
@@ -20,11 +39,11 @@
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="yourmum.html">Your Mum</a></li>
             </ul>
         </div>
     </div>
     <div class="logo">
         <img src="logo.png" alt="logo" id="mask" width="300" height="200">
     </div>
+    <div id="fadingImage" class="image-styled"></div>
 </body>
